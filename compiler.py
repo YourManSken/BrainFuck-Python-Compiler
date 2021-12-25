@@ -74,7 +74,9 @@ def execute():
     global BRAINFUCK_CODE, BRAINFUCK_POINTER
     if FILE_IMPORT:
         BRAINFUCK_CODE = import_script()
-        print(BRAINFUCK_CODE)
+    else:
+        BRAINFUCK_CODE = input('Input Brainfuck code: ')
+    print(BRAINFUCK_CODE)
 
     while BRAINFUCK_POINTER < len(BRAINFUCK_CODE):
         convert()
